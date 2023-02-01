@@ -14,7 +14,7 @@ const NoticiasProvider=({children})=>{
     const consultarAPI= async () =>{
         const url=`https://newsapi.org/v2/top-headlines?country=us&category=${categoria}&pageSize=100&apiKey=${import.meta.env.VITE_API_KEY}`
         const {data}= await axios(url)
-        console.log(data)
+       useNoticias(data.articles)
 
     }
       consultarAPI()
@@ -22,7 +22,7 @@ const NoticiasProvider=({children})=>{
     
 
 return (
-    <NoticiasContext.Provider value={{categoria,handleChangeCategoria
+    <NoticiasContext.Provider value={{categoria,handleChangeCategoria,noticias
     
     
     

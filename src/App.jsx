@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Container, Grid, Typography } from "@mui/material";
 import Formulario from "./components/Formulario";
 import { NoticiasProvider } from "./context/NoticiasProvider"; 
+import ListadoNoticias from "./components/ListadoNoticias";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Formulario/>
       </Grid>
       </Grid>
+      <ListadoNoticias/>
     </Container>
     </NoticiasProvider>
   );
